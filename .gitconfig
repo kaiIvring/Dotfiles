@@ -1,0 +1,11 @@
+[user]
+	name = KaiIvring
+	email = 3011973335@qq.com
+[credential "https://gitee.com"]
+	provider = generic
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	editor = nano -w
