@@ -8,7 +8,7 @@ export TERM=xterm-256color
 #别名
 alias gs='git status'
 alias gc='git commit'
-alias gl='git log --oneline'
+alias gl='git log --all --graph --decorate'
 alias ..='cd ..'
 alias ...='cd ../..'
 
