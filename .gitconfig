@@ -9,3 +9,6 @@
 	rebase = false
 [core]
 	editor = vim
+[alias]
+	graph = log --all --graph --decorate --oneline
+
