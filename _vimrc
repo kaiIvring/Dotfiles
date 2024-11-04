@@ -76,7 +76,7 @@ nnoremap <Down>  :echoe "Use j"<CR>
 "设置字体
 set guifont=仿宋:h12
 "设置主题
-colorscheme evening
+colorscheme lunaperche
 "设置映射双击'j'键为<Esc>
 inoremap <silent> jj <Esc>
 
