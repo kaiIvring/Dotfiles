@@ -1,7 +1,3 @@
-" Comments in Vimscript start with a `"`.
-
-" If you open this file in Vim, it'll be syntax highlighted for you.
-
 " Vim is based on Vi. Setting `nocompatible` switches from the default
 " Vi-compatibility mode and enables useful Vim functionality. This
 " configuration option turns out not to be necessary for the file named
@@ -23,9 +19,6 @@ set number
 " This enables relative line numbering mode. With both number and
 " relativenumber enabled, the current line shows the true line number, while
 " all other lines (above and below) are numbered relative to the current line.
-" This is useful because you can tell, at a glance, what count is needed to
-" jump up or down to a particular line, by {count}k to go up or {count}j to go
-" down.
 set relativenumber
 
 " Always show the status line at the bottom, even if you only have one window open.
@@ -74,5 +67,33 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up>    :echoe "Use k"<CR>
 nnoremap <Down>  :echoe "Use j"<CR>
 
+" remapping some keybind
 inoremap jj <Esc>
 set timeoutlen=500
+
+" bind C-n to open nerdtree
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+" plugin manage
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'mhinz/vim-startify'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-surround'
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
