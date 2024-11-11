@@ -101,3 +101,8 @@ let g:syntastic_check_on_wq = 0
 
 " set airline theme
 let g:airline_theme='simple'
+
+" set cursor
+autocmd InsertEnter * silent !echo -ne "\e[6 q"
+autocmd InsertLeave * silent !echo -ne "\e[2 q"
+
